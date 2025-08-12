@@ -1,5 +1,5 @@
 {
-    "name": "mvbassalobre/groq-api-service",
+    "name": "marcusvbda/groq-api-service",
     "autoload": {
         "psr-4": {
             "Mvbassalobre\\GroqApiService\\": "src/"
