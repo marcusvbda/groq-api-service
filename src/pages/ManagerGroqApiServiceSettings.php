@@ -1,11 +1,11 @@
 <?php
 
-namespace Mvbassalobre\GroqApiService\Pages;
+namespace marcusvbda\GroqApiService\Pages;
 
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Pages\SettingsPage;
-use Mvbassalobre\GroqApiService\Settings\GroqApiServiceSettings;
+use marcusvbda\GroqApiService\Settings\GroqApiServiceSettings;
 
 class ManagerGroqApiServiceSettings extends SettingsPage
 {

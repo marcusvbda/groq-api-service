@@ -1,6 +1,6 @@
 <?php
 
-namespace Mvbassalobre\GroqApiService\Settings;
+namespace marcusvbda\GroqApiService\Settings;
 
 use Spatie\LaravelSettings\Settings;
 

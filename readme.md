@@ -15,7 +15,7 @@ A Laravel package integrating with Filament to manage Groq API Service settings 
 1. Require the package via Composer:
 
 ```bash
-composer require mvbassalobre/groq-api-service
+composer require marcusvbda/groq-api-service
 ```
 
 2. Publish the package assets:

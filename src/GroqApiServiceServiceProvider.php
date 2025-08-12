@@ -1,6 +1,6 @@
 <?php
 
-namespace Mvbassalobre\GroqApiService;
+namespace marcusvbda\GroqApiService;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

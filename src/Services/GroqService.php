@@ -1,9 +1,9 @@
 <?php
 
-namespace Mvbassalobre\GroqApiService\Services;
+namespace marcusvbda\GroqApiService\Services;
 
 use BadMethodCallException;
-use Mvbassalobre\GroqApiService\Settings\GroqApiServiceSettings;
+use marcusvbda\GroqApiService\Settings\GroqApiServiceSettings;
 use League\HTMLToMarkdown\HtmlConverter;
 use OpenAI\Laravel\Facades\OpenAI;
 

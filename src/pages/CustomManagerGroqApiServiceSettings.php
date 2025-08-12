@@ -2,7 +2,7 @@
 
 namespace App\Filament\Pages;
 
-use Mvbassalobre\GroqApiService\Pages\ManagerGroqApiServiceSettings as OriginalManagerGroqApiServiceSettings;
+use marcusvbda\GroqApiService\Pages\ManagerGroqApiServiceSettings as OriginalManagerGroqApiServiceSettings;
 
 class ManagerGroqApiServiceSettings extends OriginalManagerGroqApiServiceSettings
 {
