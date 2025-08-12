@@ -38,15 +38,21 @@ class ManagerGroqApiServiceSettings extends SettingsPage
                         Forms\Components\TextInput::make('settings.key')
                             ->label(__("key")),
                         Forms\Components\TextInput::make('settings.temperature')
+                            ->type('number')
+                            ->step('0.01')
+                            ->min('0')
+                            ->max('1')
+                            ->required()
                             ->label(__("Temperature")),
                         Forms\Components\TextInput::make('settings.base_url')
                             ->url()
+                            ->required()
                             ->label(__("Base URL")),
-                        Forms\Components\Select::make('settings.base_url')
+                        Forms\Components\Select::make('settings.model')
                             ->options([
                                 'meta-llama/llama-4-maverick-17b-128e-instruct'
                             ])
-                            ->default('meta-llama/llama-4-maverick-17b-128e-instruct')
+                            ->required()
                             ->label(__("Base URL")),
                     ]),
                     Forms\Components\Tabs\Tab::make(__('Instructions'))->schema([
