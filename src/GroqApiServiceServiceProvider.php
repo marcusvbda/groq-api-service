@@ -30,10 +30,9 @@ class GroqApiServiceServiceProvider extends PackageServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
 
         $this->publishes([
-            __DIR__ . '/settings/GroqApiServiceSettings.php' => app_path('Settings/GroqApiServiceSettings.php'),
             __DIR__ . '/pages/CustomManagerGroqApiServiceSettings.php' => app_path('Filament/Pages/ManagerGroqApiServiceSettings.php'),
             __DIR__ . '/database/migrations/create_groq-api-services-settings.php' => database_path('migrations/2025_01_01_000000_create_groq-api-services-settings.php'),
             __DIR__ . '/config/groq-api-service.php' => config_path('groq-api-service.php'),
-        ], 'groq-api-service');
+        ], $this->name);
     }
 }
