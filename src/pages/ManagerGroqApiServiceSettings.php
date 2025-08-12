@@ -34,23 +34,34 @@ class ManagerGroqApiServiceSettings extends SettingsPage
         return $form
             ->schema([
                 Forms\Components\Tabs::make('settings')->tabs([
-                    Forms\Components\Tabs\Tab::make(__('Groq API Service'))->schema([
-                        Forms\Components\RichEditor::make('settings.initial_instructions')
+                    Forms\Components\Tabs\Tab::make(__('General'))->schema([
+                        Forms\Components\TextInput::make('settings.key')
+                            ->label(__("key")),
+                        Forms\Components\TextInput::make('settings.temperature')
+                            ->label(__("Temperature")),
+                        Forms\Components\TextInput::make('settings.base_url')
+                            ->url()
+                            ->label(__("Base URL")),
+                        Forms\Components\Select::make('settings.base_url')
+                            ->options([
+                                'meta-llama/llama-4-maverick-17b-128e-instruct'
+                            ])
+                            ->default('meta-llama/llama-4-maverick-17b-128e-instruct')
+                            ->label(__("Base URL")),
+                    ]),
+                    Forms\Components\Tabs\Tab::make(__('Instructions'))->schema([
+                        Forms\Components\Textarea::make('settings.initial_instructions')
                             ->label(__("Initial Instructions"))
-                            ->disableToolbarButtons(['attachFiles'])
-                            ->required(),
-                        Forms\Components\RichEditor::make('settings.absolute_rules')
+                            ->rows(5),
+                        Forms\Components\Textarea::make('settings.absolute_rules')
                             ->label(__("Absolute Rules"))
-                            ->disableToolbarButtons(['attachFiles'])
-                            ->required(),
-                        Forms\Components\RichEditor::make('settings.expected_response_type')
+                            ->rows(5),
+                        Forms\Components\Textarea::make('settings.expected_response_type')
                             ->label(__("Expected Response Type"))
-                            ->disableToolbarButtons(['attachFiles'])
-                            ->required(),
-                        Forms\Components\RichEditor::make('settings.main_context')
+                            ->rows(5),
+                        Forms\Components\Textarea::make('settings.main_context')
                             ->label(__("Main Context"))
-                            ->disableToolbarButtons(['attachFiles'])
-                            ->required(),
+                            ->rows(5),
                     ]),
                 ])
             ])->columns(1);
