@@ -40,8 +40,8 @@ class ManagerGroqApiServiceSettings extends SettingsPage
                         Forms\Components\TextInput::make('settings.temperature')
                             ->type('number')
                             ->step('0.01')
-                            ->min('0')
-                            ->max('1')
+                            ->minValue(0)
+                            ->maxValue(1)
                             ->required()
                             ->label(__("Temperature")),
                         Forms\Components\TextInput::make('settings.base_url')
