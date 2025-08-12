@@ -46,10 +46,7 @@ class ManagerGroqApiServiceSettings extends SettingsPage
                             ->url()
                             ->required()
                             ->label(__("Base URL")),
-                        Forms\Components\Select::make('settings.model')
-                            ->options([
-                                'meta-llama/llama-4-maverick-17b-128e-instruct'
-                            ])
+                        Forms\Components\TextInput::make('settings.model')
                             ->required()
                             ->label(__("Base URL")),
                     ]),
