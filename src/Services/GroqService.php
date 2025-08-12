@@ -30,7 +30,7 @@ class GroqService
     public function makeGetters(): void
     {
         foreach ($this->settings as $key => $value) {
-            $functionGet = fn() =>  data_get($this->settings, $key);
+            $functionGet = fn() =>  data_get($this->settings, $key) ?: '';
             $keyName = ucfirst(str_replace(' ', '', ucwords(str_replace('_', ' ', $key))));
             $this->dynamicMethods["get$keyName"] = $functionGet->bindTo($this, $this);
         }
@@ -82,7 +82,7 @@ class GroqService
             'remove_nodes' => 'script style'
         ]);
 
-        return $converter->convert($html);
+        return $converter->convert($html ?: '');
     }
 
     public function makeContextualizedThread(): array
