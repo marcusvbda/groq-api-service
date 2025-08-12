@@ -51,6 +51,8 @@ class ManagerGroqApiServiceSettings extends SettingsPage
                             ->label(__("Base URL")),
                     ]),
                     Forms\Components\Tabs\Tab::make(__('Instructions'))->schema([
+                        Forms\Components\TextInput::make('settings.bot_name')
+                            ->label(__("Bot Name")),
                         Forms\Components\Textarea::make('settings.initial_instructions')
                             ->label(__("Initial Instructions"))
                             ->rows(5),

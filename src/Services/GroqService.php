@@ -15,7 +15,7 @@ class GroqService
     public function __construct(array $payload = [])
     {
         $initialThread = data_get($payload, 'thread', []);
-        $this->settings = array_merge(config('groq-api-service'), app()->make(GroqApiServiceSettings::class)->settings, [
+        $this->settings = array_merge(app()->make(GroqApiServiceSettings::class)->settings, [
             'thread' => $initialThread
         ], $payload);
 
